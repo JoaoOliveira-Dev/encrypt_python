@@ -8,10 +8,13 @@ key = chars.copy()
 random.shuffle(key)
 
 # print(f"Original: {chars}")
-print(f"Key: {key}")  
+# print(f"Key: {key}")  
 
 def encrypt(text):
     encrypted = ""
+    key_env = "".join(key)
+    print(f"Key: {key_env}")
+    
     for char in text:
         index = chars.index(char)
         encrypted += key[index]
